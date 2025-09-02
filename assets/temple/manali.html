@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manali Travel Guide - Complete Guide to Himachal Pradesh's Gem</title>
+    <meta name="description" content="Discover Manali travel guide with top attractions like Hadimba Temple, Solang Valley, Rohtang Pass. Complete itinerary and travel tips included.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #001F5B;
+    --secondary-color: #FFFFFF;
+    --accent-color: #f39c12;
+    --text-dark: #1a1a1a;
+    --text-light: #666;
+    --text-muted: #9ca3af;
+    --background-light: #f8fafc;
+    --background-dark: #1f2937;
+    --border-light: #e2e8f0;
+    --border-dark: #374151;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.nav-logo i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+                url('https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 31, 91, 0.4), rgba(243, 156, 18, 0.2));
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--white);
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--accent-color), #e67e22);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(243, 156, 18, 0.3);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+    width: 30px;
+    height: 30px;
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    transform: rotate(45deg);
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 0;
+}
+
+.content-section {
+    padding: 5rem 0;
+}
+
+.bg-light {
+    background: var(--background-light);
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.content-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.content-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.content-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.content-image:hover img {
+    transform: scale(1.05);
+}
+
+/* History Section */
+.history-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subsection-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Attractions Grid */
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.attraction-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.attraction-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.card-content p {
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+/* Tips Grid */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tip-icon {
+    display: inline-block;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.tip-card p {
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Itinerary */
+.itinerary-container {
+    display: grid;
+    gap: 3rem;
+}
+
+.itinerary-day {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.day-header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.day-number {
+    background: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.day-content {
+    padding: 2rem;
+}
+
+.time-slot {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.time-slot:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.time-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.time-icon.morning {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.time-icon.afternoon {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.time-icon.evening {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.time-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.time-content p {
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Personal Story */
+.personal-story {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.story-header i {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.story-header h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Conclusion */
+.conclusion {
+    background: linear-gradient(135deg, var(--background-light), var(--white));
+}
+
+.conclusion-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conclusion-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    color: var(--text-muted);
+}
+
+.cta-section {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+.footer {
+    background: var(--background-dark);
+    color: var(--secondary-color);
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-dark);
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .attractions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .time-slot {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .content-section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .day-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .story-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Smooth scrolling for all browsers */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation for images */
+img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .back-to-top,
+    .cta-buttons {
+        display: none;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 2rem 0;
+        background: none;
+        color: var(--text-dark);
+    }
+    
+    .content-section {
+        padding: 1rem 0;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-mountain"></i>
+                <span>Manali Explorer</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#attractions" class="nav-link">Places</a></li>
+                <li><a href="#itinerary" class="nav-link">Itinerary</a></li>
+                <li><a href="#tips" class="nav-link">Tips</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Manali</h1>
+            <p class="hero-subtitle">Where Snow-Capped Peaks Meet Your Soul</p>
+            <button class="cta-button" onclick="scrollToSection('introduction')">
+                Start Your Journey <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Introduction -->
+        <section id="introduction" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">First Impressions of Paradise</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p class="intro-text">
+                            The moment you step into Manali, the crisp mountain air fills your lungs with an almost intoxicating freshness, carrying the earthy scent of pine and cedar from the towering forests that embrace this Himalayan paradise. The distant sound of the Beas River's gentle murmur mingles with prayer flags fluttering in the breeze, while snow-dusted peaks pierce the azure sky like ancient sentinels. Your first glimpse of traditional wooden houses with slate roofs nestled against emerald hillsides tells you immediately—this isn't just another destination, it's a portal to tranquility.
+                        </p>
+                        <p>
+                            The cultural vibe here is infectious; local vendors offer steaming cups of chai while the aroma of fresh momos wafts through the air. Children's laughter echoes from apple orchards, and the sight of elderly locals spinning prayer wheels creates an atmosphere where time seems to slow down, inviting you to breathe deeper and smile wider.
+                        </p>
+                    </div>
+                    <div class="content-image">
+                        <img src="https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg" alt="Manali mountain landscape" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Background/History -->
+        <section class="content-section bg-light">
+            <div class="container">
+                <div class="history-content">
+                    <h3 class="subsection-title">
+                        <i class="fas fa-history"></i>
+                        A Glimpse into History
+                    </h3>
+                    <p>
+                        Named after the legendary sage Manu, believed to be the creator of human race, Manali holds deep mythological significance as the place where Manu's ark landed after the great flood. This ancient town has served as a crucial trading post on the historic trade route to Ladakh and Central Asia, making it a melting pot of cultures and traditions. Today, Manali stands as the gateway to the Himalayas, preserving its rich cultural heritage while welcoming adventurers from around the world.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Attractions -->
+        <section id="attractions" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Top 5 Must-Visit Places</h2>
+                    <p class="section-subtitle">Discover the gems that make Manali travel unforgettable</p>
+                </div>
+
+                <div class="attractions-grid">
+                    <article class="attraction-card">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/3889695/pexels-photo-3889695.jpeg" alt="Hadimba Temple" loading="lazy">
+                            <div class="card-overlay">
+                                <i class="fas fa-temple-hindu"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Hadimba Temple</h3>
+                            <p>
+                                Standing majestically amidst towering cedar trees, the 450-year-old Hadimba Temple is an architectural marvel that seems to grow from the forest itself. This four-tiered wooden temple, dedicated to Hadimba Devi, showcases intricate Himalayan craftsmanship with its pagoda-style roof and detailed wood carvings. The temple's serene atmosphere, enhanced by the surrounding Dhungiri Van Vihar, offers a perfect blend of spirituality and natural beauty, making it a photographer's paradise and a soul's sanctuary.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="attraction-card">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg" alt="Solang Valley adventure sports" loading="lazy">
+                            <div class="card-overlay">
+                                <i class="fas fa-skiing"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Solang Valley</h3>
+                            <p>
+                                Solang Valley transforms into an adventure playground where adrenaline meets alpine beauty. In winter, this snow-covered wonderland becomes a skiing and snowboarding haven, while summer brings paragliding opportunities that let you soar above the valley like an eagle. The cable car ride offers breathtaking panoramic views of glaciers and peaks, and the valley's meadows dotted with colorful wildflowers create a postcard-perfect setting. Whether you're seeking thrills or tranquil mountain views, Solang Valley delivers both in abundance.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="attraction-card">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg" alt="Rohtang Pass snow mountains" loading="lazy">
+                            <div class="card-overlay">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Rohtang Pass</h3>
+                            <p>
+                                At 13,050 feet, Rohtang Pass is literally the "pile of corpses" in local dialect, named for its challenging terrain, but don't let that deter you—this high-altitude pass offers some of the most spectacular mountain vistas in India. The journey itself is an adventure through winding roads flanked by snow-capped peaks, glaciers, and pristine valleys. During peak season, you'll find snow even in summer, perfect for snowball fights and building snowmen while surrounded by the majestic Pir Panjal range.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="attraction-card">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg" alt="Old Manali streets and cafes" loading="lazy">
+                            <div class="card-overlay">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Old Manali</h3>
+                            <p>
+                                Old Manali exudes a bohemian charm that captivates backpackers and culture enthusiasts alike. This area buzzes with cozy cafes serving everything from Israeli cuisine to local Himachali delicacies, while narrow lanes lined with traditional stone and wood houses tell stories of bygone eras. The Manalsu River adds a melodic soundtrack to your explorations, and the area's relaxed vibe makes it perfect for leisurely walks, cafe-hopping, and soaking in the local culture. It's where tradition meets contemporary wanderlust.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="attraction-card">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" alt="Beas River flowing through mountains" loading="lazy">
+                            <div class="card-overlay">
+                                <i class="fas fa-water"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Beas River</h3>
+                            <p>
+                                The Beas River flows like liquid silver through Manali, creating numerous spots for reflection and adventure along its banks. Whether you're white-water rafting through thrilling rapids or simply sitting by the riverside watching the sunset paint the mountains gold, the Beas offers something magical. The riverbanks are perfect for picnics, and the sound of flowing water provides a natural meditation soundtrack. Many riverside camps and resorts offer the ultimate experience of falling asleep and waking up to the river's gentle symphony.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Tips -->
+        <section id="tips" class="content-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Essential Travel Tips</h2>
+                    <p class="section-subtitle">Make your Manali travel smooth and memorable</p>
+                </div>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Best Seasons</h4>
+                        <p>Visit March-June for pleasant weather and adventure sports. December-February offers magical snowfall but requires warm clothing. Monsoon (July-September) brings landslide risks—best avoided.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h4>Permits Required</h4>
+                        <p>Rohtang Pass requires online permits (₹500 for cars). Book at least 2-3 days in advance. Inner Line Permits needed for areas beyond Rohtang. Keep ID proofs handy for hotel check-ins.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Transportation</h4>
+                        <p>Fly to Bhuntar Airport (50km away) or take buses from Delhi/Chandigarh. Local taxis and rental bikes available. Book cabs early for Rohtang trips. Carry motion sickness tablets for winding roads.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h4>Packing Essentials</h4>
+                        <p>Layer clothing—temperatures vary dramatically. Pack warm jackets, comfortable walking shoes, sunscreen, and sunglasses. Carry medicines for altitude sickness and basic first aid supplies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Itinerary -->
+        <section id="itinerary" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Perfect 2-Day Manali Itinerary</h2>
+                    <p class="section-subtitle">A carefully crafted plan to experience the best of Manali</p>
+                </div>
+
+                <div class="itinerary-container">
+                    <div class="itinerary-day">
+                        <div class="day-header">
+                            <div class="day-number">1</div>
+                            <h3>Day 1: Culture & Nature</h3>
+                        </div>
+                        <div class="day-content">
+                            <div class="time-slot">
+                                <div class="time-icon morning">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="time-content">
+                                    <h4>Morning (8:00 AM - 12:00 PM)</h4>
+                                    <p>Start with breakfast at a local cafe, then visit Hadimba Temple for peaceful morning prayers. Explore the surrounding Dhungiri Van Vihar forest, perfect for nature walks and photography.</p>
+                                </div>
+                            </div>
+                            <div class="time-slot">
+                                <div class="time-icon afternoon">
+                                    <i class="fas fa-cloud-sun"></i>
+                                </div>
+                                <div class="time-content">
+                                    <h4>Afternoon (12:00 PM - 6:00 PM)</h4>
+                                    <p>Lunch in Mall Road, then explore Old Manali's charming cafes and local markets. Visit Manu Temple and enjoy riverside relaxation along the Beas River banks.</p>
+                                </div>
+                            </div>
+                            <div class="time-slot">
+                                <div class="time-icon evening">
+                                    <i class="fas fa-moon"></i>
+                                </div>
+                                <div class="time-content">
+                                    <h4>Evening (6:00 PM onwards)</h4>
+                                    <p>Sunset viewing from Club House, followed by dinner at a riverside restaurant. Take a leisurely walk through Mall Road for souvenir shopping and local delicacies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-day">
+                        <div class="day-header">
+                            <div class="day-number">2</div>
+                            <h3>Day 2: Adventure & Heights</h3>
+                        </div>
+                        <div class="day-content">
+                            <div class="time-slot">
+                                <div class="time-icon morning">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="time-content">
+                                    <h4>Morning (7:00 AM - 1:00 PM)</h4>
+                                    <p>Early departure to Solang Valley for adventure sports—paragliding, zorbing, or cable car rides. Enjoy mountain breakfast at valley-side cafes with panoramic views.</p>
+                                </div>
+                            </div>
+                            <div class="time-slot">
+                                <div class="time-icon afternoon">
+                                    <i class="fas fa-cloud-sun"></i>
+                                </div>
+                                <div class="time-content">
+                                    <h4>Afternoon (1:00 PM - 6:00 PM)</h4>
+                                    <p>Journey to Rohtang Pass (permits required). Experience snow activities, glacier viewing, and capture stunning mountain photography. Pack warm clothes and carry lunch.</p>
+                                </div>
+                            </div>
+                            <div class="time-slot">
+                                <div class="time-icon evening">
+                                    <i class="fas fa-moon"></i>
+                                </div>
+                                <div class="time-content">
+                                    <h4>Evening (6:00 PM onwards)</h4>
+                                    <p>Return to Manali town. Relax at your hotel, enjoy a hot dinner, and share stories of your mountain adventures. Perfect time to plan your next Himalayan expedition!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Experience -->
+        <section class="content-section bg-gradient">
+            <div class="container">
+                <div class="personal-story">
+                    <div class="story-header">
+                        <i class="fas fa-heart"></i>
+                        <h3>A Personal Mountain Moment</h3>
+                    </div>
+                    <div class="story-content">
+                        <p>
+                            I'll never forget my first morning in Manali when I woke up to find snow gently falling outside my window in what was supposed to be late spring. Rushing outside in my pajamas and jacket, I watched local children building snowmen while their grandparents smiled knowingly—apparently, surprise snowfall is just another gift that Manali offers its visitors. Standing there, catching snowflakes on my tongue while the sun simultaneously painted the peaks golden, I realized this wasn't just a destination I was visiting; it was a feeling I was experiencing. That spontaneous snow dance with strangers became the highlight of my entire trip, reminding me that the best travel moments are often the unplanned ones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="content-section conclusion">
+            <div class="container">
+                <div class="conclusion-content">
+                    <h2 class="section-title">Your Mountain Adventure Awaits</h2>
+                    <p class="conclusion-text">
+                        Manali isn't just a destination—it's a transformative experience that reconnects you with nature's grandeur and your inner peace. From the spiritual serenity of Hadimba Temple to the adrenaline rush of Solang Valley adventures, from the breathtaking heights of Rohtang Pass to the bohemian charm of Old Manali, every moment here writes itself into your memory forever. The combination of natural beauty, cultural richness, and adventure opportunities makes Manali travel an essential experience for anyone seeking to explore India's Himalayan treasures.
+                    </p>
+                    
+                    <div class="cta-section">
+                        <h3>Ready to Plan Your Journey?</h3>
+                        <p>The best time to visit is April to June for adventure sports and September to November for clear mountain views. Start planning your Manali itinerary today!</p>
+                        
+                        <div class="cta-buttons">
+                            <button class="btn-primary" onclick="showBookingInfo()">
+                                <i class="fas fa-calendar-check"></i>
+                                Plan Your Trip
+                            </button>
+                            <button class="btn-secondary" onclick="shareLocation()">
+                                <i class="fas fa-share-alt"></i>
+                                Share This Guide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-mountain"></i> Manali Explorer</h4>
+                    <p>Your complete guide to experiencing the magic of Manali, Himachal Pradesh.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#attractions">Top Places</a></li>
+                        <li><a href="#itinerary">2-Day Itinerary</a></li>
+                        <li><a href="#tips">Travel Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@manaliexplorer.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Manali Explorer. All rights reserved. | Designed for adventure seekers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+     <script>
+       // Smooth scrolling and navigation functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Navigation scroll effect
+    const navbar = document.querySelector('.navbar');
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+        const scrolled = window.scrollY;
+        
+        // Navbar background opacity based on scroll
+        if (scrolled > 100) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        }
+        
+        // Back to top button visibility
+        if (scrolled > 500) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+    
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // Parallax effect for hero section
+    window.addEventListener('scroll', function() {
+        const scrolled = window.scrollY;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+    
+    // Animated counters for statistics (if added in future)
+    function animateValue(element, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            element.innerText = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+    
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all cards and sections for animation
+    document.querySelectorAll('.attraction-card, .tip-card, .itinerary-day').forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Lazy loading for images
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.remove('lazy');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+    
+    // Add loading animation to images
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('load', function() {
+            this.style.opacity = '1';
+        });
+    });
+    
+    // Weather widget integration (placeholder for future implementation)
+    function loadWeatherWidget() {
+        // This would integrate with a weather API to show current Manali weather
+        console.log('Weather widget placeholder');
+    }
+    
+    // Search functionality (placeholder for future implementation)
+    function initializeSearch() {
+        const searchButton = document.querySelector('.search-toggle');
+        if (searchButton) {
+            searchButton.addEventListener('click', function() {
+                // Toggle search overlay
+                console.log('Search functionality placeholder');
+            });
+        }
+    }
+    
+    // Initialize all features
+    initializeSearch();
+});
+
+// Utility functions
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        const headerHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = section.offsetTop - headerHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function showBookingInfo() {
+    // Modal or alert with booking information
+    const bookingInfo = `
+🏔️ PLAN YOUR MANALI TRIP:
+
+📅 Best Time to Visit:
+• March-June: Perfect weather, adventure sports
+• December-February: Snow activities, winter sports
+• Avoid July-September: Monsoon season
+
+🎫 Booking Tips:
+• Book accommodations 2-3 weeks in advance
+• Get Rohtang Pass permits online
+• Compare prices on multiple platforms
+• Consider package deals for groups
+
+📞 Contact local travel agents:
+• Manali Tourism Office: +91-1902-252175
+• HPTDC: +91-1902-252116
+
+🌐 Recommended Booking Platforms:
+• MakeMyTrip, Goibibo, Booking.com
+• Local homestays via Airbnb
+• Direct hotel bookings for better rates
+
+Happy Travels! 🎒
+    `;
+    
+    alert(bookingInfo);
+}
+
+function shareLocation() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Manali Travel Guide - Complete Guide to Himachal Pradesh',
+            text: 'Check out this amazing Manali travel guide with itinerary, tips, and top attractions!',
+            url: window.location.href
+        }).catch(console.error);
+    } else {
+        // Fallback for browsers that don't support native sharing
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            showToast('Link copied to clipboard!');
+        }).catch(() => {
+            // Final fallback
+            const textArea = document.createElement('textarea');
+            textArea.value = url;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            showToast('Link copied to clipboard!');
+        });
+    }
+}
+
+function showToast(message) {
+    // Create toast notification
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    toast.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: var(--primary-color);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-lg);
+        z-index: 10000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    `;
+    
+    document.body.appendChild(toast);
+    
+    // Animate in
+    setTimeout(() => {
+        toast.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        toast.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 300);
+    }, 3000);
+}
+
+// Enhanced scroll animations
+function addScrollAnimations() {
+    const elements = document.querySelectorAll('.attraction-card, .tip-card, .time-slot');
+    
+    elements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(50px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transitionDelay = `${index * 0.1}s`;
+    });
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    elements.forEach(el => observer.observe(el));
+}
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', addScrollAnimations);
+
+// Progressive Web App features (placeholder for future implementation)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        // Register service worker for offline functionality
+        console.log('PWA features placeholder');
+    });
+}
+
+// Add dynamic year to footer
+document.addEventListener('DOMContentLoaded', function() {
+    const footerText = document.querySelector('.footer-bottom p');
+    if (footerText) {
+        footerText.innerHTML = footerText.innerHTML.replace('2024', new Date().getFullYear());
+    }
+});
+
+// Performance optimization: Lazy load non-critical CSS
+function loadNonCriticalCSS() {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css';
+    link.onload = function() {
+        // Initialize AOS animations if library is loaded
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                offset: 100,
+                once: true
+            });
+        }
+    };
+    document.head.appendChild(link);
+}
+
+// Load non-critical resources after page load
+window.addEventListener('load', loadNonCriticalCSS);
+
+// Add keyboard navigation support
+document.addEventListener('keydown', function(e) {
+    // ESC key to close modals or overlays
+    if (e.key === 'Escape') {
+        // Close any open modals
+        const activeModal = document.querySelector('.modal.active');
+        if (activeModal) {
+            activeModal.classList.remove('active');
+        }
+    }
+    
+    // Arrow keys for navigation (if implementing carousel features)
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        // Handle carousel navigation
+        console.log('Carousel navigation placeholder');
+    }
+});
+
+// Add touch/swipe support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 100;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Swipe left
+            console.log('Swipe left detected');
+        } else {
+            // Swipe right
+            console.log('Swipe right detected');
+        }
+    }
+}
+
+// Add print functionality
+function printPage() {
+    window.print();
+}
+
+// Add bookmark functionality
+function bookmarkPage() {
+    if (window.sidebar && window.sidebar.addPanel) {
+        // Firefox
+        window.sidebar.addPanel(document.title, window.location.href, '');
+    } else if (window.external && ('AddFavorite' in window.external)) {
+        // IE
+        window.external.AddFavorite(window.location.href, document.title);
+    } else if (window.opera && window.print) {
+        // Opera
+        const elem = document.createElement('a');
+        elem.setAttribute('href', window.location.href);
+        elem.setAttribute('title', document.title);
+        elem.setAttribute('rel', 'sidebar');
+        elem.click();
+    } else {
+        // Other browsers
+        showToast('Press Ctrl+D (Cmd+D on Mac) to bookmark this page');
+    }
+}
+
+// Initialize all functionality
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Manali Travel Blog loaded successfully! 🏔️');
+    
+    // Add custom cursor effects (optional enhancement)
+    const links = document.querySelectorAll('a, button');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            document.body.style.cursor = 'pointer';
+        });
+        link.addEventListener('mouseleave', function() {
+            document.body.style.cursor = 'default';
+        });
+    });
+});
+       </script>
+    <script src="script.js"></script>
+</body>
+</html>
